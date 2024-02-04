@@ -20,6 +20,7 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import StorageIcon from '@mui/icons-material/Storage';
+import {Link} from "react-router-dom"
 
 const drawerWidth = 240;
 
@@ -72,7 +73,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-end',
 }));
 
-export default function PersistentDrawerLeft() {
+export default function Navbar() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -143,7 +144,8 @@ export default function PersistentDrawerLeft() {
                 <ListItemIcon>
                   {index % 2 === 0 ? <AccountCircleOutlinedIcon/>: <MailIcon />}
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <Link to="/login"> <ListItemText primary={text} /> </Link>
+                
               </ListItemButton>
             </ListItem>
           ))}
