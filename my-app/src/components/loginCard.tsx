@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import axios from 'axios'
 
 const LoginCard: React.FC = () => {
     const [email, setEmail] = useState('')
@@ -6,6 +7,9 @@ const LoginCard: React.FC = () => {
 
     function handleSubmit(event:any){
         event.preventDefault();
+        axios.post('http://localhost:8081/login', {email, password})
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
     }
  
     return (
