@@ -21,7 +21,7 @@ const HomePage = () => {
         <Navbar />
       </div>
       <div className="z-90 flex-grow fixed top-20 left-0 right-0">
-        <DashboardStats stats={exampleStat} />
+        <DashboardStats />
       </div>
     </div>
   );
