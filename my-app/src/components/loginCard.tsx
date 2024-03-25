@@ -7,7 +7,7 @@ const LoginCard: React.FC = () => {
 
     function handleSubmit(event:any){
         event.preventDefault();
-        axios.post('http://localhost:8081/login', {email, password})
+        axios.post('http://localhost:5000/login', {email, password})
         .then(res => console.log(res))
         .catch(err => console.log(err))
     }
