@@ -14,7 +14,7 @@ const db = mysql.createConnection({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME
 });
-
+ 
 
 app.get("/",(req,res)=>{
     res.send("Hi");
